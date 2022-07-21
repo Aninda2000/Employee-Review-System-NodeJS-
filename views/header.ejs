@@ -1,0 +1,25 @@
+
+<nav class="nav d-flex justify-content-between bg-dark">
+
+    <div>
+        <a class="nav-link active text-light" aria-current="page" href="/">Employee Review System</a>
+    </div>
+
+    <div class="d-flex">
+
+        <% if(locals.user && !locals.user.isAdmin){ %>
+            <a class="nav-link text-light" href="/users/logout">Log Out</a>
+            <a class="nav-link text-light" href="#"><%= user.name %></a>
+        <% }else if(locals.user && locals.user.isAdmin){ %>
+            <a class="nav-link text-light" href="/admin/admin-page">Assign Work</a>
+            <a class="nav-link text-light" href="/admin/view-employees">Employees</a>
+            <a class="nav-link text-light" href="/users/register">Register</a>
+            <a class="nav-link text-light" href="/users/logout">Log Out</a>
+        <% }else{ %>
+            <a class="nav-link text-light" href="/users/login">Log In</a>
+            <a class="nav-link text-light" href="/users/register">Register</a>
+        <% } %>  
+
+    </div>
+    
+  </nav>

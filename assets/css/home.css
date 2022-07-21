@@ -1,0 +1,29 @@
+
+.w-4{
+    width:45%;
+}
+#body-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.no-b{
+    border: 0px solid white;
+}
+
+.w-100{
+    width:100%;
+}
+
+#body-container{
+    margin-top: 60px;
+}
+
+.right-alligned{
+    display: flex;
+    justify-content: end;
+}
+
+.m-10{
+    margin:10px;
+}

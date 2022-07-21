@@ -1,0 +1,76 @@
+
+
+
+<div class="container-fluid mt-4">
+    <h2 class="text-center" style="font-family: monospace;">Assign recipient and reciever</h2>
+
+    <div class="container d-flex justify-content-between mt-4">
+        <div class="row col-md-6 card">
+            <h4 class="text-center">Set Reviewers</h4>
+            <hr>
+
+            <form method="POST" action="/admin/set-Reviewers" class="mt-2 card-body">
+                <div>
+                    <h6>Recipient</h6>
+                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
+                        name="Recipient">
+                
+                        <option selected disabled>Select Recipient</option>
+
+                        <% for(let i=0; i < employeeList.length; i++){ %>
+
+                            <option value="<%= employeeList[i].id  %>">
+                                <%= employeeList[i].name %>
+                            </option>
+
+                        <% } %>
+                    </select>
+                </div>
+
+                <div>
+                    <h6>Reviewer</h6>
+                    <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
+                        name="Reviewer">
+
+                        <option selected disabled>Select Reviewer</option>
+  
+                        <% for(let i = 0; i < employeeList.length; i++){ %>
+                            <option value="<%= employeeList[i].id %>">
+                                <%= employeeList[i].name %>
+                            </option>
+                        <% } %>
+                    </select>
+                </div>
+
+                <div class="d-grid gap-2 col-6 mx-auto form_button">
+                    <input class="btn btn-dark" type="submit" value="Submit">
+                </div>
+
+            </form>
+        </div>
+
+        <div class="row col-md-6 card">
+            <h4 class="text-cebter">Assign admin to employees</h4>
+            <hr>
+
+            <form method="POST" action="/admin/newAdmin" class="mt-3">
+                <select class="form-select form-select-lg mb-3" aria-label=".form-select-lg example"
+                    name="newAdmin">
+
+                    <option selected disabled>Click here...</option>
+                    <% for(let i=0; i < employeeList.length; i++){ %>
+                        <option value="<%= employeeList[i].id %>">
+                            <%= employeeList[i].name %>
+                        </option>
+                    <%}%>
+                </select>
+
+                <div class="d-grid gap-2 col-6 mx-auto form_button">
+                  <input class="btn btn-dark" type="submit" value="Submit" />
+                </div>
+
+            </form>
+        </div>
+
+    </div>
+</div>

@@ -1,0 +1,35 @@
+
+
+<div class="container my-5">
+
+    <div class="row mt-3">
+        <div class="col-md-6 m-auto">
+            <div class="card card-body">
+                <h1 class="text-center">Log In</h1>
+
+                <form action="/users/create-session" method="post">
+                    <div class="form-group mt-2">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" class="form-control" placeholder="Enter Email"/>
+                    </div>
+    
+                    <div class="form-group mt-2">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" class="form-control" placeholder="Enter Password"/>
+                    </div>
+
+    
+                    <div class="d-grid gap-2 col-12 mx-auto mt-3">
+                        <button class="btn btn-primary" type="submit">Log In</button>
+                    </div>
+
+                    <p class="lead mt-4">
+                        Have No Account? <a class="r-link" href="/users/register">Register</a>
+                    </p>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+</div>

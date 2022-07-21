@@ -1,0 +1,61 @@
+
+<h3 class="text-center mt-3" style="font-family: monospace;">All Employees List</h3>
+
+<div class="container mt-4" style="font-family: monospace;">
+
+    <table class="table table-dark table-hover">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Password</th>
+                <th scope="col">Admin</th>
+                <th scope="col">Del Button</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <% for(let i=0;i < employees.length;i++){ %>
+                <tr>
+                <td><%=employees[i].name %></td>
+                <td><%=employees[i].email %></td>
+                <td><%=employees[i].password %></td>
+                <td><%=employees[i].isAdmin %></td>
+                <td>
+                    <a href="/admin/delete-employee/<%=employees[i]._id%>" class="btn btn-danger">
+                        Delete
+                    </a>
+                </td>
+                </tr>
+            <% } %>
+        </tbody>
+    </table>
+
+    <!-- <ul class="list-group ">
+        <li class="list-group-item d-flex justify-content-between">
+
+            <p class="text-center"><b>Name</b></p>
+            <p class="text-center"><b>Email</b></p>
+            <p class="text-center"><b>Password</b></p>
+            <p class="text-center"><b>Admin</b></p>
+            <p class="text-center"><b>Delete</b></p>
+            
+        </li>
+        <% for(let i=0;i < employees.length;i++){ %>
+            <li class="list-group-item d-flex justify-content-between text-center">
+
+                <p class="text-center"><%=employees[i].name %></p>
+                <p class="text-center"><%=employees[i].email %></p>
+                <p class="text-center"><%=employees[i].password %></p>
+                <p class="text-center"><%=employees[i].isAdmin %></p>
+            
+                <a href="/admin/delete-employee/<%=employees[i]._id%>" class="btn btn-danger">
+                    Delete
+                </a>     
+                
+            </li>
+            
+        <% } %>
+    </ul> -->
+
+</div>
