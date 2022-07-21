@@ -1,0 +1,29 @@
+{
+  "name": "employee-review-system-nodejs-",
+  "version": "1.0.0",
+  "description": "this project is given by coding ninja",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Aninda2000/Employee-Review-System-NodeJS-.git"
+  },
+  "author": "Aninda Sundar Roy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Aninda2000/Employee-Review-System-NodeJS-/issues"
+  },
+  "homepage": "https://github.com/Aninda2000/Employee-Review-System-NodeJS-#readme",
+  "dependencies": {
+    "connect-mongo": "^4.6.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.17.3",
+    "mongoose": "^6.4.6",
+    "passport": "^0.6.0",
+    "passport-local": "^1.0.0"
+  }
+}
