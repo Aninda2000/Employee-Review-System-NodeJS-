@@ -47,9 +47,13 @@ module.exports.createSession = function(req, res){
 
 // destroying session
 module.exports.destroySession = function(req, res){
-    req.logout();
-    console.log('Logeed Out');
-    return res.redirect('/users/login');
+    req.logout(function(err){
+        if(err){
+            console.log("error while log out :",err);
+            return;
+        }
+        return res.redirect('/users/login');
+    });
 }
 
 
@@ -126,7 +130,7 @@ module.exports.home = async function(req, res){
         }
 
         return res.render('home', {
-            title : "ERS | Home",
+            title : "Home Page",
             recipients: recipients,
             reviews: reviews,
             user : user,

@@ -117,7 +117,7 @@ module.exports.viewEmployees = async function(req, res){
                 
                 if(employees){
                     return res.render('employee', {
-                        title : "ERS | Employee",
+                        title : " Employee List",
                         employees : employees,
                     });
                 }
