@@ -1,6 +1,6 @@
 
 const express = require('express');
-const port = 8000;
+const port =process.env.PORT || 8000;
 const app = express();
 
 const expressLayouts = require('express-ejs-layouts');

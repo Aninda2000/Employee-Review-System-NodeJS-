@@ -1,25 +1,19 @@
 
-<nav class="nav d-flex justify-content-between bg-dark">
-
-    <div>
-        <a class="nav-link active text-light" aria-current="page" href="/">Employee Review System</a>
-    </div>
-
-    <div class="d-flex">
-
+  <nav class="py-2 bg-light border-bottom">
+    <div class="container d-flex flex-wrap">
+      <ul class="nav me-auto">
         <% if(locals.user && !locals.user.isAdmin){ %>
-            <a class="nav-link text-light" href="/users/logout">Log Out</a>
-            <a class="nav-link text-light" href="#"><%= user.name %></a>
+            <li class="nav-item"><a href="/users/logout" class="nav-link link-dark px-2">Log Out</a></li>
+            <li class="nav-item"><a href="#" class="nav-link link-dark px-2"><%= user.name %></a></li>
         <% }else if(locals.user && locals.user.isAdmin){ %>
-            <a class="nav-link text-light" href="/admin/admin-page">Assign Work</a>
-            <a class="nav-link text-light" href="/admin/view-employees">Employees</a>
-            <a class="nav-link text-light" href="/users/register">Register</a>
-            <a class="nav-link text-light" href="/users/logout">Log Out</a>
+            <li class="nav-item"><a href="/admin/admin-page" class="nav-link link-dark px-2 active" >Assign Review</a></li>
+            <li class="nav-item"><a href="/admin/view-employees" class="nav-link link-dark px-2">Employees</a></li>
+            <li class="nav-item"><a href="/users/register" class="nav-link link-dark px-2">Register</a></li>
+            <li class="nav-item"><a href="/users/logout" class="nav-link link-dark px-2">Log Out</a></li>
         <% }else{ %>
-            <a class="nav-link text-light" href="/users/login">Log In</a>
-            <a class="nav-link text-light" href="/users/register">Register</a>
-        <% } %>  
-
+            <li class="nav-item"><a href="/users/login" class="nav-link link-dark px-2">Log In</a></li>
+            
+        <% } %> 
+      </ul>
     </div>
-    
   </nav>

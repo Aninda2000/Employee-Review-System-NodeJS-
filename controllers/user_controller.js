@@ -16,7 +16,7 @@ module.exports.createUser = async function(req, res){
 
         if(user){
             console.log("user already exist");
-            return res.redirect('/users/register');
+            return res.redirect('/users/login');
         }else{
             await User.create({
                 name : req.body.name,
