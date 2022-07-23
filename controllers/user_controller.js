@@ -34,6 +34,7 @@ module.exports.createUser = async function(req, res){
     } catch (error) {
         console.log('error while creating user', error);
         return res.redirect('/users/register');
+        
     }
     
 }
